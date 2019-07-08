@@ -18,7 +18,7 @@ data <- gset[[1]]
 data<-check_log(data)
 glist=gsub(" \\/\\/\\/.+","",perl=T,fData(data)[,11])
 agg=aggregate(exprs(data),by=list(glist),FUN=mean)
- rownames(agg)=agg[,1]
+rownames(agg)=agg[,1]
 agg=agg[,-1]
 agg=agg[-1,]
 agg=normalizeBetweenArrays(agg)
@@ -39,7 +39,7 @@ data <- gset[[1]]
 data<-check_log(data)
 glist=gsub(" \\/\\/\\/.+","",perl=T,fData(data)[,11])
 agg=aggregate(exprs(data),by=list(glist),FUN=mean)
- rownames(agg)=agg[,1]
+rownames(agg)=agg[,1]
 agg=agg[,-1]
 agg=agg[-1,]
 agg=normalizeBetweenArrays(agg)
@@ -63,7 +63,7 @@ ann_extr=function(x) {
 }
 ann=apply(data.frame(fData(data)[,10]),1,FUN=ann_extr)
 agg=aggregate(exprs(data),by=list(ann),FUN=mean)
- rownames(agg)=agg[,1]
+rownames(agg)=agg[,1]
 agg=agg[,-1]
 agg=agg[-1,]
 agg=normalizeBetweenArrays(agg)
@@ -87,7 +87,7 @@ ann_extr=function(x) {
 }
 ann=apply(data.frame(fData(data)[,10]),1,FUN=ann_extr)
 agg=aggregate(exprs(data),by=list(ann),FUN=mean)
- rownames(agg)=agg[,1]
+rownames(agg)=agg[,1]
 agg=agg[,-1]
 agg=agg[-1,]
 agg=normalizeBetweenArrays(agg)
@@ -108,7 +108,7 @@ data <- gset[[1]]
 data<-check_log(data)
 glist=gsub(" \\/\\/\\/.+","",perl=T,fData(data)[,11])
 agg=aggregate(exprs(data),by=list(glist),FUN=mean)
- rownames(agg)=agg[,1]
+rownames(agg)=agg[,1]
 agg=agg[,-1]
 agg=agg[-1,]
 agg=normalizeBetweenArrays(agg)
@@ -123,12 +123,13 @@ cor.all<-data.frame("COR"=tmp[,1],"PVAL"=tmp[,2],"ADJP"=p.adjust(tmp[,2],method=
 rownames(cor.all)<-rownames(agg)
 save(file="GSE115406",cor.all,PHOX2B.val,agg)
 
+
 gset<-getGEO("GSE43090", GSEMatrix=TRUE, getGPL=TRUE)
 data <- gset[[1]]
 data<-check_log(data)
 glist=gsub(" \\/\\/\\/.+","",perl=T,fData(data)[,7])
 agg=aggregate(exprs(data),by=list(glist),FUN=mean)
- rownames(agg)=agg[,1]
+rownames(agg)=agg[,1]
 agg=agg[,-1]
 agg=agg[-1,]
 agg=normalizeBetweenArrays(agg)
@@ -149,7 +150,7 @@ data <- gset[[1]]
 data<-check_log(data)
 glist=gsub(" \\/\\/\\/.+","",perl=T,fData(data)[,11])
 agg=aggregate(exprs(data),by=list(glist),FUN=mean)
- rownames(agg)=agg[,1]
+rownames(agg)=agg[,1]
 agg=agg[,-1]
 agg=agg[-1,]
 agg=normalizeBetweenArrays(agg)
@@ -170,7 +171,7 @@ data <- gset[[1]]
 data<-check_log(data)
 glist=gsub(" \\/\\/\\/.+","",perl=T,fData(data)[,11])
 agg=aggregate(exprs(data),by=list(glist),FUN=mean)
- rownames(agg)=agg[,1]
+rownames(agg)=agg[,1]
 agg=agg[,-1]
 agg=agg[-1,]
 agg=normalizeBetweenArrays(agg)
@@ -191,7 +192,7 @@ data <- gset[[1]]
 data<-check_log(data)
 glist=gsub(" \\/\\/\\/.+","",perl=T,fData(data)[,11])
 agg=aggregate(exprs(data),by=list(glist),FUN=mean)
- rownames(agg)=agg[,1]
+rownames(agg)=agg[,1]
 agg=agg[,-1]
 agg=agg[-1,]
 agg=normalizeBetweenArrays(agg)
